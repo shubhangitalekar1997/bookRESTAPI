@@ -81,7 +81,7 @@ public class BookDaoImpl implements BookDao {
 	public Book createBook(Book book) throws SQLException {
 		Connection conn = DBConnect.getConnection();
 		PreparedStatement stmt = conn.prepareStatement(QUERY_CREATE);
-		Book respBook = new Book();
+		Book respBook = null;
 		stmt.setInt(1, book.getId());
 		stmt.setString(2, book.getName());
 		stmt.setString(3, book.getAuthor());

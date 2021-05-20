@@ -13,6 +13,6 @@ public class IdGenerator {
 		Date dNow = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat("yyMMddhhmmssMs");
 		String datetime = ft.format(dNow);
-		return Integer.parseInt(datetime.substring(2));
+		return Integer.parseInt(datetime.substring(8));
 	}
 }
